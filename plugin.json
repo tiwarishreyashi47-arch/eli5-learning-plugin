@@ -1,0 +1,7 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "eli5-learning-companion",
+  "version": "0.1.0",
+  "description": "A conversational technical learning companion for non-technical learners. Scope a topic into a 1-7 day sprint, recommend ELI5, ELI15, or ELI30 depth, learn through explanation or Q&A, practice optionally, and create booklet-ready notes.",
+  "keywords": ["learning", "technical-fluency", "education", "eli5", "non-technical"]
+}
