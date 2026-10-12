@@ -1,0 +1,20 @@
+{
+  "name": "eli5-local",
+  "interface": {
+    "displayName": "ELI5 Learning Plugin"
+  },
+  "plugins": [
+    {
+      "name": "eli5-learning",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Education"
+    }
+  ]
+}
