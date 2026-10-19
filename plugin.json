@@ -1,7 +1,38 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "eli5-learning-companion",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A conversational technical learning companion for non-technical learners. Scope a topic into a 1-7 day sprint, recommend ELI5, ELI15, or ELI30 depth, learn through explanation or Q&A, practice optionally, and create booklet-ready notes.",
-  "keywords": ["learning", "technical-fluency", "education", "eli5", "non-technical"]
+  "author": {
+    "name": "Shreyashi Tiwari"
+  },
+  "repository": "https://github.com/tiwarishreyashi47-arch/eli5-learning-plugin",
+  "license": "MIT",
+  "keywords": ["learning", "technical-fluency", "education", "eli5", "non-technical"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "ELI5 Learning Companion",
+        "shortDescription": "Learn technical topics conversationally",
+        "longDescription": "Help non-technical learners understand technical topics through adjustable ELI5, ELI15, and ELI30 explanations, diagnostics, Q&A, optional practice, exact-text parking, and booklet-ready session notes.",
+        "developerName": "Shreyashi Tiwari",
+        "category": "Education & Research",
+        "capabilities": [
+          "Learn technical topics",
+          "Practice and review concepts",
+          "Create booklet-ready notes"
+        ],
+        "defaultPrompt": [
+          "Help me learn APIs in an ELI15 format.",
+          "Teach me cloud systems through questions.",
+          "Test my understanding of authentication."
+        ],
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/composer-icon.png"
+      },
+      "publication": {
+        "release_notes": "Initial public release of the ELI5 conversational learning companion."
+      }
+    }
+  }
 }

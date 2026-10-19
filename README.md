@@ -29,7 +29,7 @@ The intended loop is short enough to use between meetings, while still encouragi
 
 This repository contains the early V0.1 plugin package and tester guidance. Start with a topic you actually want to understand, such as APIs, cloud systems, databases, AI agents, authentication, system design, DevOps, or security basics.
 
-1. Load the package in a supported plugin environment.
+1. For local validation, run `python3 scripts/plugin_tool.py validate .`. To create the distributable archive, run `python3 scripts/plugin_tool.py package .`.
 2. Say: `I want to learn [topic].`
 3. Choose ELI5, ELI15, or ELI30, or let the diagnostic recommend one.
 4. Ask for an explanation, use Q&A, or say `Teach me through questions.`
@@ -38,6 +38,8 @@ This repository contains the early V0.1 plugin package and tester guidance. Star
 7. Say `End session` when you want the booklet-ready output.
 
 See [`START_HERE_FOR_TESTERS.md`](./START_HERE_FOR_TESTERS.md) for the short tester walkthrough and [`docs/testing/`](./docs/testing/) for the detailed plans.
+
+The repository now includes a standard-library-only validator and packager in [`scripts/plugin_tool.py`](./scripts/plugin_tool.py). A passing static check confirms package structure and metadata only; it does not prove that a ChatGPT or Codex account can install or invoke the plugin.
 
 ## Current status: early V0.1
 

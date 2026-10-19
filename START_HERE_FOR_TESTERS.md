@@ -6,7 +6,7 @@ Thanks for testing this early learning plugin.
 ELI5 helps non-technical people learn technical concepts conversationally. Pick any technical topic you genuinely want to understand — APIs, cloud, databases, AI agents, authentication, system design, DevOps, security basics, or something else.
 
 ## How to use it
-1. Install/load the plugin package in a supported ChatGPT/Codex plugin environment.
+1. Ask the plugin owner which supported development/plugin environment is being used, then load the package there. Do not assume that a GitHub repository or ZIP can be installed by an ordinary ChatGPT account.
 2. Start with: **“I want to learn [topic].”**
 3. Choose your depth:
    - **ELI5 — Understand it:** assume I know nothing.
@@ -23,6 +23,9 @@ Don’t try to follow a perfect path. Interrupt it. Ask basic questions. Ask dif
 
 ## Current V0 limitation
 The plugin does not yet have durable cross-chat storage. Keep the same conversation while testing a topic, and copy/export the booklet output at the end of a session.
+
+## What has not been proven yet
+Static package validation and a local ZIP do not prove installation, invocation, account eligibility, or friend shareability. Record the exact product/surface and account used for any real install test.
 
 ## After 2 sessions
 Please send Shreyashi:

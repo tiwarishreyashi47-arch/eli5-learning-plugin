@@ -1,6 +1,7 @@
 ---
 name: eli5-learning 
 description: Help a non-technical learner understand a technical concept in a 1-7 day conversational learning sprint. Use this skill when the user wants to learn, understand, unpack, practice, or be tested on a technical concept, system, architecture pattern, delivery dependency, or technical jargon.
+---
 
 
 ELI5 Learning Companion
