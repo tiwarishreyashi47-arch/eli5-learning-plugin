@@ -9,6 +9,7 @@ Date: 2026-10-19
 - The learning instructions preserve arbitrary topic intake, level selection, a ten-question diagnostic, free switching among learning modes, optional practice, exact-text parking, and end-of-session booklet output.
 - `python3 scripts/plugin_tool.py validate .` passes locally.
 - `python3 scripts/plugin_tool.py package .` creates a ZIP with `plugin.json` at the archive root.
+- The local Codex CLI installed version `0.1.1` from the repository marketplace successfully.
 
 ## Fixed
 
@@ -16,11 +17,12 @@ Date: 2026-10-19
 - Aligned the local marketplace entry with the manifest name.
 - Added a reproducible, dependency-free validation and packaging command.
 - Updated tester documentation to distinguish static package readiness from real installation and account eligibility.
+- Added submission metadata, release notes, and basic logo/composer icon assets.
 
 ## Unverified
 
-- No ChatGPT or Codex plugin installation/import was available in this environment.
-- No end-to-end learner conversation was invoked through a plugin host.
+- The installed desktop plugin was not invoked in a new conversation because the available UI bridge cannot control the running ChatGPT/Codex desktop app.
+- ChatGPT web/browser invocation was not treated as equivalent to a local desktop plugin test.
 - Private sharing and installation by friends on other accounts remain unverified.
 
 ## Blocked

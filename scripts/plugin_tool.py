@@ -10,6 +10,14 @@ from zipfile import ZIP_DEFLATED, ZipFile
 
 
 REQUIRED_MANIFEST_KEYS = {"$schema", "name", "version", "description"}
+REQUIRED_LISTING_KEYS = {
+    "displayName",
+    "shortDescription",
+    "longDescription",
+    "developerName",
+    "category",
+    "capabilities",
+}
 
 
 def validate(root: Path) -> list[str]:
@@ -32,6 +40,26 @@ def validate(root: Path) -> list[str]:
                 errors.append("plugin.json must declare the Agent Plugins 1.0.0 schema")
             if not isinstance(manifest.get("name"), str) or not manifest["name"]:
                 errors.append("plugin.json name must be a non-empty string")
+            author = manifest.get("author")
+            if not isinstance(author, dict) or not author.get("name"):
+                errors.append("plugin.json author.name is required for submission")
+            interface = (
+                manifest.get("extensions", {})
+                .get("com.openai", {})
+                .get("interface")
+            )
+            if not isinstance(interface, dict):
+                errors.append("extensions.com.openai.interface is required for submission")
+            else:
+                missing_listing = REQUIRED_LISTING_KEYS - interface.keys()
+                if missing_listing:
+                    errors.append(
+                        "listing metadata missing: " + ", ".join(sorted(missing_listing))
+                    )
+                for path_key in ("logo", "composerIcon"):
+                    asset = interface.get(path_key)
+                    if not isinstance(asset, str) or not (root / asset.removeprefix("./")).is_file():
+                        errors.append(f"listing asset missing: {asset or path_key}")
 
     if not skill_path.is_file():
         errors.append("missing skills/eli5-learning/SKILL.md")
