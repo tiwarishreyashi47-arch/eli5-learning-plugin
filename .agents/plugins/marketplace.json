@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "eli5-learning",
+      "name": "eli5-learning-companion",
       "source": {
         "source": "local",
         "path": "./"
